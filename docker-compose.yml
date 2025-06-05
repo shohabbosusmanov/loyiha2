@@ -11,8 +11,6 @@ services:
     environment:
       PORT: ${PORT}
       DATABASE_URL: ${DATABASE_URL}
-    env_file:
-      - .env
   postgres:
     image: postgres:17.5
     volumes:
@@ -21,8 +19,6 @@ services:
       POSTGRES_USER: ${DATABASE_USER}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
       POSTGRES_DB: ${DATABASE_DB}
-    env_file:
-      - .env
     ports:
       - '5434:5432'
     healthcheck:
